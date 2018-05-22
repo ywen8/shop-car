@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/Users/yw/AndroidStudioProjects/shop-car/shopMobile/build/intermediates/res/merged/release/layout-sw550dp-large-v13/activity_spmerchants_shop.xml",
+        "source": "/Users/yw/AndroidStudioProjects/shop-car/shopMobile/src/main/res/layout-sw550dp-large/activity_spmerchants_shop.xml"
+    },
+    {
+        "merged": "/Users/yw/AndroidStudioProjects/shop-car/shopMobile/build/intermediates/res/merged/release/layout-sw550dp-large-v13/umeng_socialize_oauth_dialog.xml",
+        "source": "/Users/yw/AndroidStudioProjects/shop-car/shopMobile/src/main/res/layout-sw550dp-large/umeng_socialize_oauth_dialog.xml"
+    },
+    {
+        "merged": "/Users/yw/AndroidStudioProjects/shop-car/shopMobile/build/intermediates/res/merged/release/layout-sw550dp-large-v13/refund_order.xml",
+        "source": "/Users/yw/AndroidStudioProjects/shop-car/shopMobile/src/main/res/layout-sw550dp-large/refund_order.xml"
+    }
+]

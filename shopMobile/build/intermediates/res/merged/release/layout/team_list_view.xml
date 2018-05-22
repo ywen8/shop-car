@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_90"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/head_corner_35"
+            android:layout_toLeftOf="@+id/go_group_rl"
+            android:background="@drawable/team_shape">
+
+            <TextView
+                android:id="@+id/nickname"
+                style="@style/textStyle.Big.black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/head_corner_35"
+                android:layout_marginTop="@dimen/margin_space_half"
+                android:text="123" />
+
+            <TextView
+                android:id="@+id/address_tv"
+                style="@style/textStyle.Normal.Gray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/nickname"
+                android:layout_marginLeft="@dimen/dp_36"
+                android:layout_marginTop="@dimen/margin_space_half"
+                android:layout_toLeftOf="@+id/time_count_tv"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="abc" />
+
+            <TextView
+                android:id="@+id/needer_tv"
+                style="@style/textStyle.Normal.lightRed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/margin_space_half"
+                android:layout_marginTop="@dimen/margin_space_half"
+                android:text="还差2人" />
+
+            <TextView
+                android:id="@+id/time_count_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/needer_tv"
+                android:layout_marginRight="@dimen/margin_space_half"
+                android:layout_marginTop="@dimen/margin_space_half" />
+        </RelativeLayout>
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/head_img"
+            android:layout_width="50dip"
+            android:layout_height="50dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_space"
+            fresco:actualImageScaleType="centerInside"
+            fresco:placeholderImage="@drawable/person_default_head"
+            fresco:roundAsCircle="true" />
+
+        <RelativeLayout
+            android:id="@+id/go_group_rl"
+            android:layout_width="@dimen/dp_90"
+            android:layout_height="@dimen/dp_50"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_space"
+            android:background="@drawable/go_team_shape">
+
+            <TextView
+                android:id="@+id/go_group_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:drawableRight="@drawable/icon_right"
+                android:text="去参与"
+                android:textColor="@color/bg_view"
+                android:textSize="@dimen/textSizeMedium" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/confirm_ll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_view">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btn_pay"
+        android:layout_marginBottom="@dimen/margin_space"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/address_rl"
+                android:layout_width="fill_parent"
+                android:layout_height="75dip"
+                android:background="@color/bg_view"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:id="@+id/address_consignee_rl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="10dip"
+                    android:layout_toLeftOf="@+id/order_address_arrow_imgv">
+
+                    <TextView
+                        android:id="@+id/order_consignee_txtv"
+                        style="@style/textStyle.Medium.LightGray"
+                        android:layout_width="match_parent"
+                        android:layout_height="25dip"
+                        android:layout_marginTop="@dimen/margin_space"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/order_address_txtv"
+                        style="@style/textStyle.Normal.Gray"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_below="@id/order_consignee_txtv"
+                        android:layout_marginBottom="@dimen/margin_space"
+                        android:drawableLeft="@drawable/icon_location"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:maxLines="2"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/address_consignee_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="10dip"
+                    android:layout_toLeftOf="@+id/order_address_arrow_imgv"
+                    android:gravity="center_vertical"
+                    android:text="请选择收货地址"
+                    android:textSize="@dimen/textSizeBig"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/order_address_arrow_imgv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="right|center_vertical"
+                    android:paddingRight="@dimen/margin_space"
+                    android:src="@drawable/personal_arrow_right" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/icon_address_divison"
+                    android:paddingRight="@dimen/margin_space" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/store_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_space"
+                android:layout_marginLeft="@dimen/margin_space"
+                android:layout_marginTop="@dimen/margin_space" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bg_header"
+                android:paddingBottom="@dimen/margin_space"
+                android:paddingTop="@dimen/margin_space">
+
+                <ImageView
+                    android:id="@+id/good_img"
+                    android:layout_width="@dimen/dp_72"
+                    android:layout_height="@dimen/dp_72"
+                    android:layout_marginLeft="@dimen/margin_space"
+                    android:background="@color/bg_view"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/icon_product_null" />
+
+                <TextView
+                    android:id="@+id/good_name"
+                    style="@style/textStyle.Normal.LightGray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_space"
+                    android:layout_toRightOf="@+id/good_img"
+                    android:ellipsize="end"
+                    android:maxLines="2" />
+
+                <TextView
+                    android:id="@+id/spec_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/good_name"
+                    android:layout_marginLeft="@dimen/margin_space"
+                    android:layout_toRightOf="@+id/good_img" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/spec_txt"
+                    android:layout_marginLeft="@dimen/margin_space"
+                    android:layout_toRightOf="@+id/good_img"
+                    android:text="不支持七天无理由退货" />
+
+                <TextView
+                    android:id="@+id/good_price"
+                    style="@style/textStyle.Normal.lightRed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/good_img"
+                    android:layout_marginLeft="@dimen/margin_space"
+                    android:layout_toRightOf="@+id/good_img" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/good_img"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/margin_space">
+
+                    <Button
+                        android:id="@+id/cart_minus_btn"
+                        android:layout_width="26dip"
+                        android:layout_height="26dip"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/cart_minus_selector" />
+
+                    <EditText
+                        android:id="@+id/cart_count_dtxtv"
+                        style="@style/textStyle.Normal.black"
+                        android:layout_width="40dip"
+                        android:layout_height="26dip"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/cart_minus_btn"
+                        android:background="@drawable/icon_cart_count"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:text="1" />
+
+                    <Button
+                        android:id="@+id/cart_plus_btn"
+                        android:layout_width="26dip"
+                        android:layout_height="26dip"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/cart_count_dtxtv"
+                        android:background="@drawable/cart_plus_selector" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <com.yw.car.widget.SPArrowRowView
+                android:id="@+id/order_coupon_aview"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_row"
+                android:clickable="true"
+                android:focusable="true"
+                custom:titleText="@string/order_coupon" />
+
+            <View style="@style/separator_line" />
+
+            <com.yw.car.widget.SPArrowRowView
+                android:id="@+id/order_seler_message_aview"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_row"
+                android:clickable="true"
+                android:focusable="true"
+                custom:titleText="@string/seler_message" />
+
+            <View style="@style/separator_line" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40">
+
+                <TextView
+                    android:id="@+id/weight_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin_space" />
+            </RelativeLayout>
+
+            <View
+                style="@style/separator_line"
+                android:layout_height="@dimen/margin_space" />
+
+            <RelativeLayout
+                android:id="@+id/order_point_rl"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_row"
+                android:background="@color/bg_view">
+
+                <TextView
+                    android:id="@+id/order_point_txtv"
+                    style="@style/textStyle.Normal.Gray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_space"
+                    android:text="当前金豆" />
+
+                <EditText
+                    android:id="@+id/order_point_et"
+                    android:layout_width="@dimen/dp_60"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin_space_half"
+                    android:layout_toLeftOf="@+id/order_point_sth"
+                    android:background="@drawable/gary_button_shape"
+                    android:focusable="true"
+                    android:inputType="number"
+                    android:paddingLeft="@dimen/margin_space_half"
+                    android:paddingRight="@dimen/margin_space_half"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/textSizeNormal" />
+
+                <com.yw.car.widget.SwitchButton
+                    android:id="@+id/order_point_sth"
+                    style="@style/SwitchButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    app:kswTintColor="@color/light_red" />
+            </RelativeLayout>
+
+            <View style="@style/separator_line" />
+
+            <RelativeLayout
+                android:id="@+id/order_balance_rl"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_row"
+                android:background="@color/bg_view">
+
+                <TextView
+                    android:id="@+id/order_balance_txtv"
+                    style="@style/textStyle.Normal.Gray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_space"
+                    android:text="当前余额" />
+
+                <EditText
+                    android:id="@+id/order_balance_et"
+                    android:layout_width="@dimen/dp_60"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin_space_half"
+                    android:layout_toLeftOf="@+id/order_balance_sth"
+                    android:background="@drawable/gary_button_shape"
+                    android:focusable="true"
+                    android:inputType="numberDecimal"
+                    android:paddingLeft="@dimen/margin_space_half"
+                    android:paddingRight="@dimen/margin_space_half"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/textSizeNormal" />
+
+                <com.yw.car.widget.SwitchButton
+                    android:id="@+id/order_balance_sth"
+                    style="@style/SwitchButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    app:kswTintColor="@color/light_red" />
+            </RelativeLayout>
+
+            <View style="@style/separator_line" />
+
+            <RelativeLayout
+                android:id="@+id/order_sn_rl"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_text"
+                android:background="@color/bg_view">
+
+                <TextView
+                    android:id="@+id/title_sn_txtv"
+                    style="@style/textStyle.Normal.Gray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_space"
+                    android:text="订单号" />
+
+                <TextView
+                    android:id="@+id/order_sn_txtv"
+                    style="@style/textStyle.Normal.lightRed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin_space" />
+            </RelativeLayout>
+
+            <View style="@style/separator_line" />
+
+            <RelativeLayout
+                android:id="@+id/goodsfee_rl"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_text"
+                android:background="@color/bg_view">
+
+                <TextView
+                    android:id="@+id/title_goodsfee_txtv"
+                    style="@style/textStyle.Normal.Gray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_space"
+                    android:text="商品总价" />
+
+                <TextView
+                    android:id="@+id/fee_goodsfee_txtv"
+                    style="@style/textStyle.Normal.lightRed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin_space"
+                    android:text="¥0.0" />
+            </RelativeLayout>
+
+            <View style="@style/separator_line" />
+
+            <RelativeLayout
+                android:id="@+id/shipping_rl"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_text"
+                android:background="@color/bg_view">
+
+                <TextView
+                    android:id="@+id/title_shopping_txtv"
+                    style="@style/textStyle.Normal.Gray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_space"
+                    android:text="运费" />
+
+                <TextView
+                    android:id="@+id/fee_shopping_txtv"
+                    style="@style/textStyle.Normal.lightRed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin_space"
+                    android:text="¥0.0" />
+            </RelativeLayout>
+
+            <View style="@style/separator_line" />
+
+            <RelativeLayout
+                android:id="@+id/order_rl"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_text"
+                android:background="@color/bg_view">
+
+                <TextView
+                    android:id="@+id/title_order_txtv"
+                    style="@style/textStyle.Normal.Gray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_space"
+                    android:text="订单总价" />
+
+                <TextView
+                    android:id="@+id/fee_order_txtv"
+                    style="@style/textStyle.Normal.lightRed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin_space"
+                    android:text="¥0.0" />
+            </RelativeLayout>
+
+            <View style="@style/separator_line" />
+
+            <RelativeLayout
+                android:id="@+id/coupon_rl"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_text"
+                android:background="@color/bg_view">
+
+                <TextView
+                    android:id="@+id/title_coupon_txtv"
+                    style="@style/textStyle.Normal.Gray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_space"
+                    android:text="优惠券" />
+
+                <TextView
+                    android:id="@+id/fee_coupon_txtv"
+                    style="@style/textStyle.Normal.lightRed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin_space"
+                    android:text="¥0.0" />
+            </RelativeLayout>
+
+            <View style="@style/separator_line" />
+
+            <RelativeLayout
+                android:id="@+id/point_rl"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_text"
+                android:background="@color/bg_view">
+
+                <TextView
+                    android:id="@+id/title_point_txtv"
+                    style="@style/textStyle.Normal.Gray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_space"
+                    android:text="金豆抵扣" />
+
+                <TextView
+                    android:id="@+id/fee_point_txtv"
+                    style="@style/textStyle.Normal.lightRed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin_space"
+                    android:text="¥0.0" />
+            </RelativeLayout>
+
+            <View style="@style/separator_line" />
+
+            <RelativeLayout
+                android:id="@+id/balance_rl"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_text"
+                android:background="@color/bg_view">
+
+                <TextView
+                    android:id="@+id/title_balance_txtv"
+                    style="@style/textStyle.Normal.Gray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_space"
+                    android:text="余额支付" />
+
+                <TextView
+                    android:id="@+id/fee_balance_txtv"
+                    style="@style/textStyle.Normal.lightRed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin_space"
+                    android:text="¥0.0" />
+            </RelativeLayout>
+
+            <View style="@style/separator_line" />
+
+            <RelativeLayout
+                android:id="@+id/pay_rl"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_text"
+                android:background="@color/bg_view">
+
+                <TextView
+                    android:id="@+id/title_pay_txtv"
+                    style="@style/textStyle.Normal.Gray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_space"
+                    android:text="应付金额" />
+
+                <TextView
+                    android:id="@+id/fee_pay_txtv"
+                    style="@style/textStyle.Normal.lightRed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin_space"
+                    android:text="¥0.0" />
+            </RelativeLayout>
+
+            <View style="@style/separator_line" />
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_pay"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/margin_space"
+        android:layout_marginLeft="@dimen/margin_space"
+        android:layout_marginRight="@dimen/margin_space"
+        android:background="@drawable/btn_bg"
+        android:text="立即支付"
+        android:textColor="@color/bg_view"
+        android:textSize="@dimen/textSizeMedium" />
+</RelativeLayout>

@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yw.car.view.ScrollInterceptScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_5"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_5"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="选择省份："
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_16" />
+
+            <TextView
+                android:background="@color/home_center_bg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:hint="请选择"
+                android:textSize="@dimen/sp_14"
+                android:id="@+id/shengfen"
+                android:padding="@dimen/dp_10"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="选择城市："
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_16" />
+
+            <TextView
+                android:id="@+id/chengshi"
+                android:layout_width="wrap_content"
+                android:background="@color/home_center_bg"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:textSize="@dimen/sp_14"
+                android:hint="请选择"
+                android:padding="@dimen/dp_10"
+                android:textColor="@color/black" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/rim_view_bg" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_5"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_5"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="汽车类型"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_16" />
+
+        <RadioGroup
+            android:id="@+id/chexing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/small_xing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_pressed_true"
+                android:button="@null"
+                android:checked="true"
+                android:padding="@dimen/dp_10"
+                android:text="小型汽车"
+                android:textColor="@color/rim_view_bg" />
+
+            <RadioButton
+                android:id="@+id/big_xing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:background="@drawable/btn_pressed_false"
+                android:button="@null"
+                android:padding="@dimen/dp_10"
+                android:text="大型汽车"
+                android:textColor="@color/rim_view_bg" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/rim_view_bg" />
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/dp_5"
+        android:layout_marginBottom="@dimen/dp_5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发动机号:"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_16" />
+
+        <EditText
+            android:id="@+id/fadongji"
+            android:textSize="@dimen/sp_14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_20"
+            android:background="@drawable/btn_pressed_edit"
+            android:hint="请输入完整的发动号"
+            android:padding="@dimen/dp_10" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="@dimen/dp_5"
+        android:layout_marginBottom="@dimen/dp_5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="车架号码:"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_16" />
+
+        <EditText
+            android:id="@+id/chejia"
+            android:textSize="@dimen/sp_14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_20"
+            android:background="@drawable/btn_pressed_edit"
+            android:hint="请输入完整的车架号"
+            android:padding="@dimen/dp_10" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/rim_view_bg" />
+    <LinearLayout
+        android:layout_marginTop="@dimen/dp_5"
+        android:layout_marginBottom="@dimen/dp_5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="车牌号码:"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_16" />
+
+        <EditText
+            android:id="@+id/chepai"
+            android:textSize="@dimen/sp_14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_20"
+            android:background="@drawable/btn_pressed_edit"
+            android:hint="请输入完整的车牌号(例:京A00001)"
+            android:padding="@dimen/dp_10" />
+    </LinearLayout>
+
+    <TextView
+        android:textColor="@color/light_red"
+        android:layout_marginTop="@dimen/dp_20"
+        android:textSize="@dimen/sp_12"
+        android:layout_gravity="center_horizontal"
+        android:text="本功能查询的信息仅供参考"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/chaxun"
+        android:layout_marginTop="@dimen/dp_10"
+        android:text="查询"
+        android:background="@drawable/btn_bg"
+        android:layout_marginRight="@dimen/dp_20"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:textColor="@color/white"
+        android:gravity="center_horizontal"
+        android:paddingTop="@dimen/dp_10"
+        android:paddingBottom="@dimen/dp_10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:id="@+id/item_li"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/dp_50"
+        android:orientation="vertical"
+        android:descendantFocusability="blocksDescendants"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/weizhang_item"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+    </LinearLayout>
+</com.yw.car.view.ScrollInterceptScrollView>

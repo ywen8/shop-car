@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/savecar_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_30"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/activity_savecar"
+                android:layout_width="@dimen/dp_120"
+                android:layout_height="@dimen/dp_120"
+                android:scaleType="fitXY"
+                fresco:placeholderImage="@drawable/register_top"
+                fresco:roundAsCircle="true"
+                fresco:roundedCornerRadius="@dimen/dp_30" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="@string/register_success"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_14" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="完善车主信息，可享受更多贴心服务！" />
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="@dimen/dp_40"
+                android:padding="@dimen/dp_10"
+                android:src="@drawable/cx" />
+
+            <TextView
+                android:layout_width="@dimen/dp_72"
+                android:layout_height="wrap_content"
+                android:text="@string/add_car_type"
+                android:textColor="@color/car_type"
+                android:textSize="@dimen/sp_14" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:id="@+id/car_band"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:background="@color/home_center_bg"
+                    android:hint="品牌"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_12" />
+
+                <TextView
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:id="@+id/car_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:background="@color/home_center_bg"
+                    android:hint="@string/mode_type"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_12" />
+
+                <TextView
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:id="@+id/car_nianfen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:layout_weight="1"
+                    android:background="@color/home_center_bg"
+                    android:gravity="center"
+                    android:hint="@string/year"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_12" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:layout_marginStart="@dimen/dp_10"
+            android:background="@color/rim_view_bg" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="@dimen/dp_40"
+                android:padding="@dimen/dp_10"
+                android:src="@drawable/cs" />
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="@dimen/dp_72"
+                android:layout_height="wrap_content"
+                android:text="@string/location"
+                android:textColor="@color/car_type"
+                android:textSize="@dimen/sp_14" />
+
+
+                <TextView
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:layout_marginBottom="@dimen/dp_5"
+                    android:id="@+id/car_city"
+                    android:layout_width="@dimen/dp_70"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:gravity="center"
+                    android:background="@color/home_center_bg"
+                    android:hint="西安"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_12" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:layout_marginStart="@dimen/dp_10"
+            android:background="@color/rim_view_bg" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="@dimen/dp_40"
+                android:padding="@dimen/dp_10"
+                android:src="@drawable/cp_num" />
+
+            <EditText
+                android:id="@+id/car_chepai"
+                android:layout_width="@dimen/dp_120"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="left"
+                android:hint="车牌号"
+                android:textColor="@color/car_type"
+                android:textSize="@dimen/sp_14" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:layout_marginStart="@dimen/dp_10"
+            android:background="@color/rim_view_bg" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="@dimen/dp_40"
+                android:padding="@dimen/dp_10"
+                android:src="@drawable/cj_num" />
+
+            <EditText
+                android:id="@+id/car_chejia"
+                android:layout_width="@dimen/dp_120"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="left"
+                android:hint="车架号"
+                android:textColor="@color/car_type"
+                android:textSize="@dimen/sp_14" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:layout_marginStart="@dimen/dp_10"
+            android:background="@color/rim_view_bg" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="@dimen/dp_40"
+                android:padding="@dimen/dp_10"
+                android:src="@drawable/fdj_num" />
+
+            <EditText
+                android:id="@+id/car_fadongji"
+                android:layout_width="@dimen/dp_120"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="left"
+                android:hint="发动机号"
+                android:textColor="@color/car_type"
+                android:textSize="@dimen/sp_14" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:layout_marginStart="@dimen/dp_10"
+            android:background="@color/rim_view_bg" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="@dimen/dp_40"
+                android:padding="@dimen/dp_10"
+                android:src="@drawable/lx_num" />
+
+            <EditText
+                android:id="@+id/car_leixing"
+                android:layout_width="@dimen/dp_120"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="left"
+                android:hint="车辆类型"
+                android:textColor="@color/car_type"
+                android:textSize="@dimen/sp_14" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:layout_marginStart="@dimen/dp_10"
+            android:background="@color/rim_view_bg" />
+
+        <Button
+            android:id="@+id/car_commit"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_20"
+            android:background="@drawable/btn_bg"
+            android:gravity="center"
+            android:text="@string/commit"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:id="@+id/car_skip"
+            android:layout_marginBottom="@dimen/dp_40"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="我还没有车，跳过>"
+            android:textColor="@color/light_red" />
+    </LinearLayout>
+</ScrollView>

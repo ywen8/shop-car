@@ -1,0 +1,145 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_14"
+        android:layout_marginRight="@dimen/dp_14"
+        android:layout_marginTop="@dimen/dp_22"
+        android:text="温馨提示：" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_14"
+        android:layout_marginRight="@dimen/dp_14"
+        android:text="1.限时特价、预约资格等购买优惠可能一并取消" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_14"
+        android:layout_marginRight="@dimen/dp_14"
+        android:text="2.如遇订单拆分、使用优惠券无法返还" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_14"
+        android:layout_marginRight="@dimen/dp_14"
+        android:text="3.支付金额，抵扣余额积分都按原路退款" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_14"
+        android:layout_marginRight="@dimen/dp_14"
+        android:text="3.支付金额，抵扣余额积分都按原路退款" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_22"
+        android:background="@color/bg_view"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/refund_reason_rl"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:paddingLeft="@dimen/dp_36"
+            android:paddingRight="@dimen/dp_36">
+
+            <TextView
+                android:id="@+id/refund_reason_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="退款原因：" />
+
+            <TextView
+                android:id="@+id/refund_reason"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/refund_img"
+                android:layout_toRightOf="@+id/refund_reason_tv" />
+
+            <ImageView
+                android:id="@+id/refund_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/xuanze" />
+        </RelativeLayout>
+
+        <View
+            style="@style/separator_line"
+            android:layout_marginLeft="@dimen/margin_space"
+            android:layout_marginRight="@dimen/margin_space" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:paddingLeft="@dimen/dp_36"
+            android:paddingRight="@dimen/dp_36">
+
+            <TextView
+                android:id="@+id/refund_contact_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="联系人：" />
+
+            <EditText
+                android:id="@+id/refund_contact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/refund_contact_tv"
+                android:background="@null" />
+        </RelativeLayout>
+
+        <View
+            style="@style/separator_line"
+            android:layout_marginLeft="@dimen/margin_space"
+            android:layout_marginRight="@dimen/margin_space" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:paddingLeft="@dimen/dp_36"
+            android:paddingRight="@dimen/dp_36">
+
+            <TextView
+                android:id="@+id/refund_mobile_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="手机号：" />
+
+            <EditText
+                android:id="@+id/refund_mobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/refund_mobile_tv"
+                android:background="@null" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/refund_btn"
+        android:layout_width="@dimen/dp_90"
+        android:layout_height="@dimen/dp_36"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp_22"
+        android:background="@android:color/holo_red_dark"
+        android:text="申请退款"
+        android:textColor="@color/bg_view" />
+</LinearLayout>
+

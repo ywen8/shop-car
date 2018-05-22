@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/apply_rl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_view">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="@dimen/dp_40"
+                android:padding="@dimen/dp_10"
+                android:src="@drawable/cx" />
+
+            <TextView
+                android:layout_width="@dimen/dp_72"
+                android:layout_height="wrap_content"
+                android:text="@string/add_car_type"
+                android:textColor="@color/car_type"
+                android:textSize="@dimen/sp_14" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/rim_smallmaintain_car_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:hint="品牌"
+                    android:background="@color/home_center_bg"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_12" />
+
+                <TextView
+                    android:id="@+id/rim_smallmaintain_model"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:background="@color/home_center_bg"
+                    android:hint="@string/mode_type"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_12" />
+
+                <TextView
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:background="@color/home_center_bg"
+                    android:id="@+id/rim_smallmaintain_particular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:hint="@string/year"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_12" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:layout_marginStart="@dimen/dp_10"
+            android:background="@color/rim_view_bg" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="@dimen/dp_40"
+                android:padding="@dimen/dp_10"
+                android:src="@drawable/cs" />
+
+            <TextView
+
+                android:layout_width="@dimen/dp_72"
+                android:layout_height="wrap_content"
+                android:text="@string/location"
+                android:layout_weight="1"
+                android:textColor="@color/car_type"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_marginBottom="@dimen/dp_5"
+                android:id="@+id/rim_smallmaintain_city"
+                android:layout_width="@dimen/dp_70"
+                android:background="@color/home_center_bg"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginRight="@dimen/dp_10"
+                android:gravity="center"
+                android:hint="西安"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_12" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:layout_marginStart="@dimen/dp_10"
+            android:background="@color/rim_view_bg" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="@dimen/dp_40"
+                android:padding="@dimen/dp_10"
+                android:src="@drawable/sr" />
+
+            <EditText
+                android:id="@+id/rim_small_licheng"
+                android:layout_width="@dimen/dp_120"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="left"
+                android:hint="@string/road_haul"
+                android:textColor="@color/car_type"
+                android:textSize="@dimen/sp_14" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:layout_marginStart="@dimen/dp_10"
+            android:background="@color/rim_view_bg" />
+
+        <Button
+            android:id="@+id/rimsmallmaintain_commit"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_20"
+            android:background="@drawable/btn_bg"
+            android:gravity="center"
+            android:text="@string/commit"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_14" />
+    </LinearLayout>
+</RelativeLayout>

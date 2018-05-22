@@ -1,0 +1,252 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_activity"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_view">
+
+        <ImageView
+            android:id="@+id/group_good_img"
+            android:layout_width="@dimen/dp_90"
+            android:layout_height="@dimen/dp_90"
+            android:layout_marginBottom="@dimen/margin_space_half"
+            android:layout_marginLeft="@dimen/margin_space"
+            android:layout_marginTop="@dimen/margin_space_half"
+            android:scaleType="fitCenter"
+            android:src="@drawable/icon_product_null" />
+
+        <TextView
+            android:id="@+id/group_good_name"
+            style="@style/textStyle.Normal.LightGray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/group_good_img"
+            android:layout_marginLeft="@dimen/margin_space"
+            android:layout_marginRight="@dimen/margin_space"
+            android:layout_marginTop="@dimen/margin_space_half"
+            android:layout_toRightOf="@+id/group_good_img"
+            android:ellipsize="end"
+            android:maxLines="2" />
+
+        <TextView
+            android:id="@+id/group_good_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/group_good_price"
+            android:layout_marginBottom="@dimen/margin_space_half"
+            android:layout_marginLeft="@dimen/margin_space"
+            android:layout_marginRight="@dimen/margin_space"
+            android:layout_marginTop="@dimen/margin_space_half"
+            android:layout_toRightOf="@+id/group_good_img" />
+
+        <TextView
+            android:id="@+id/group_good_price"
+            style="@style/textStyle.Big.lightRed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/group_good_img"
+            android:layout_marginLeft="@dimen/margin_space"
+            android:layout_toRightOf="@+id/group_good_img" />
+
+        <TextView
+            android:id="@+id/group_good_cut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/group_good_img"
+            android:layout_marginLeft="@dimen/margin_space_half"
+            android:layout_toRightOf="@+id/group_good_price" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_view"
+        android:paddingBottom="@dimen/margin_space"
+        android:paddingTop="@dimen/margin_space">
+
+        <RelativeLayout
+            android:id="@+id/head_img_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/found_img"
+                android:layout_width="50dip"
+                android:layout_height="50dip"
+                android:layout_marginTop="@dimen/dp_10"
+                fresco:actualImageScaleType="centerInside"
+                fresco:placeholderImage="@drawable/pic_member"
+                fresco:roundAsCircle="true" />
+
+            <TextView
+                android:id="@+id/found_txt"
+                android:layout_width="@dimen/dp_36"
+                android:layout_height="@dimen/dp_22"
+                android:background="@drawable/yellow_shape_btn"
+                android:gravity="center"
+                android:text="拼主" />
+
+            <LinearLayout
+                android:id="@+id/pic_member_ll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_space"
+                android:layout_toRightOf="@+id/found_img"
+                android:orientation="horizontal" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/group_good_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/head_img_rl"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_space" />
+
+        <TextView
+            android:id="@+id/group_good_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/head_img_rl"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_space"
+            android:drawableLeft="@drawable/group_notice"
+            android:drawablePadding="@dimen/dp_5" />
+
+        <Button
+            android:id="@+id/btn_join"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_below="@+id/head_img_rl"
+            android:layout_marginLeft="@dimen/margin_space"
+            android:layout_marginRight="@dimen/margin_space"
+            android:layout_marginTop="@dimen/dp_40"
+            android:background="@drawable/button_shape"
+            android:textColor="@color/bg_view"
+            android:textSize="@dimen/textSizeMedium" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:layout_marginTop="1dp"
+        android:background="@color/bg_view">
+
+        <TextView
+            style="@style/textStyle.Normal.LightGray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_space"
+            android:text="拼单须知" />
+
+        <TextView
+            style="@style/textStyle.Normal.Gray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_space"
+            android:text="· 好友拼单 · 人满发货 · 人不满退货" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_space"
+        android:background="@color/bg_view"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/margin_space"
+        android:paddingTop="@dimen/margin_space">
+
+        <LinearLayout
+            android:id="@+id/home_ll"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/icon_tab_home_checked" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/margin_space_half"
+                android:text="首页逛逛" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/seckill_ll"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/pic_ms" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/margin_space_half"
+                android:text="秒杀" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/promote_ll"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/pic_qc" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/margin_space_half"
+                android:text="促销" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/group_ll"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/pic_tg" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/margin_space_half"
+                android:text="团购" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
